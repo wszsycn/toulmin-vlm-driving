@@ -1,3 +1,11 @@
 *.mp4
 *.avi
 *.mov
+__pycache__/
+*.pyc
+*.pth
+*.bin
+*.safetensors
+outputs/
+*.jsonl
+.env
