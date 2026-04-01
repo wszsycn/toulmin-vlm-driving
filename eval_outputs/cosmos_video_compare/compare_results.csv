@@ -1,0 +1,501 @@
+id,video_path,ground_truth_answer,base_pred_answer,base_format_ok,ft_pred_answer,ft_format_ok,base_pred_text,ft_pred_text
+video_0191_track_46_nlp_vid_47_uid_5112_v2_00380-00395_video,/workspace/PSI_change/video_llama2_bbox/video_0191_track_46_00380-00395.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is standing on the right side of the road, facing the vehicle, and appears to be waiting or preparing to cross. There is no visible movement indicating a change in position or direction at this moment.
+warrant: If the pedestrian is stationary and oriented toward the road, they are likely intending to cross when safe.
+answer: yes","grounds: The pedestrian is already in the parking lane near the right edge and is moving toward the left sidewalk. This movement is oriented away from the ego vehicle’s lane.
+warrant: When someone is walking perpendicularly across a lane toward a sidewalk, they typically intend to clear the roadway instead of entering it further.
+answer: yes"
+video_0157_track_56_nlp_vid_8_uid_5219_v2_00403-00418_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_56_00403-00418.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the parking lot, moving from left to right, and appears to be following a curved path while maintaining a steady pace.
+warrant: When a pedestrian moves across a parking lot in a curved trajectory away from the vehicle's initial position, it indicates an intention to cross the area.
+answer: yes","grounds: The pedestrian is already in the parking lane and is increasing speed while running. They are moving toward the ego vehicle’s path and are near a crosswalk.
+warrant: A person who is already in the travel lane and accelerates while approaching a crosswalk typically intends to keep crossing.
+answer: yes"
+video_0150_track_2_nlp_vid_58_uid_5112_v2_00305-00320_video,/workspace/PSI_change/video_llama2_bbox/video_0150_track_2_00305-00320.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing beside a parked vehicle on the right side of the frame, showing no immediate movement toward the roadway or crossing action.
+warrant: When pedestrians stand near parked vehicles without moving toward the road, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing the road. No crosswalk is visible, and a driver is near a building entrance.
+warrant: People near a parked vehicle and facing the road often tend to be waiting or observing rather than initiating a crossing immediately.
+answer: no"
+video_0204_track_2_nlp_vid_42_uid_4657_v2_00240-00255_video,/workspace/PSI_change/video_llama2_bbox/video_0204_track_2_00240-00255.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the road, facing the camera, and appears to be waiting or preparing to move. There is no visible motion indicating a clear crossing action at this moment.
+warrant: When a pedestrian is stationary on the roadway without clear movement, it often suggests they are waiting for a safe opportunity to cross.
+answer: no","grounds: The pedestrian is already in the parking lane near a car and is facing the vehicle. They begin walking toward the car while another person stands nearby.
+warrant: A pedestrian who is oriented toward a vehicle and walking in that direction typically intends to reach it rather than initiate a crossing.
+answer: no"
+video_0163_track_34_nlp_vid_25_uid_4828_v2_00174-00189_video,/workspace/PSI_change/video_llama2_bbox/video_0163_track_34_00174-00189.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the road, partially obstructing the lane, and appears to be waiting or preparing to cross. There is no visible movement indicating they are about to step off the road.
+warrant: A pedestrian standing still on the roadway without clear signs of movement suggests they are not yet intending to cross.
+answer: no","grounds: The pedestrian is already in the roadway between the two lanes and is increasing speed toward a building. The pedestrian is near the ego vehicle and another car is close behind.
+warrant: A person who is already in the road and accelerates while near traffic typically intends to keep crossing to reach a destination.
+answer: yes"
+video_0160_track_13_nlp_vid_54_uid_4610_v2_00150-00165_video,/workspace/PSI_change/video_llama2_bbox/video_0160_track_13_00150-00165.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is crossing the road in front of the ego vehicle, moving from left to right across the intersection. The pedestrian is fully within the crosswalk and appears to be completing their crossing motion.
+warrant: When a pedestrian is observed mid-crossing in the crosswalk, it indicates they have the intention to continue crossing the road.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0159_track_7_nlp_vid_51_uid_4814_v2_00180-00195_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_7_00180-00195.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting to cross. There is no visible movement indicating a change in position or intention to cross at this moment.
+warrant: A pedestrian standing on the sidewalk and facing the street typically indicates an intention to cross, especially if they remain stationary and attentive to traffic.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0158_track_6_nlp_vid_2_uid_4828_v2_00185-00200_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_6_00185-00200.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is standing in the middle of the road, facing the camera, and appears to be waiting or preparing to cross. There is no visible movement indicating a change in position or direction at this moment.
+warrant: If a pedestrian is stationary in the middle of the road and facing the vehicle, it suggests an intention to cross rather than walk along the sidewalk.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0204_track_2_nlp_vid_58_uid_4663_v2_00110-00125_video,/workspace/PSI_change/video_llama2_bbox/video_0204_track_2_00110-00125.mp4,yes,yes,True,no,True,"grounds: The pedestrian is standing near the center of the road, facing the camera vehicle, and appears stationary with no immediate movement toward the sides.
+warrant: When a pedestrian stands directly in the middle of a roadway without moving toward the edges or sidewalks, it typically indicates an intention to cross.
+answer: yes","grounds: The pedestrian is standing still very close to a parked car and is facing the parked vehicle. No crosswalk is visible, and a driver is near a building entrance.
+warrant: People who are stationary and oriented toward a parked vehicle often tend to be waiting or interacting with it instead of initiating a crossing immediately.
+answer: no"
+video_0157_track_55_nlp_vid_8_uid_5219_v2_00423-00438_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_55_00423-00438.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing near the entrance of a building, facing away from the camera, and appears stationary with no immediate movement toward crossing the road.
+warrant: When pedestrians are near building entrances and remain stationary, they are likely waiting to cross rather than intending to cross immediately.
+answer: no","grounds: The pedestrian is already in the parking lane and is increasing speed while running. They are moving toward a gap between parked cars.
+warrant: A person who is already in a travel lane and accelerates while angling toward a space between vehicles typically intends to keep crossing that gap.
+answer: yes"
+video_0196_track_34_nlp_vid_13_uid_4814_v2_00092-00107_video,/workspace/PSI_change/video_llama2_bbox/video_0196_track_34_00092-00107.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the crosswalk. There is no visible movement toward the crosswalk or any indication that they are preparing to cross.
+warrant: When a pedestrian is stationary on the sidewalk and not moving toward the crosswalk, it usually means they do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0204_track_2_nlp_vid_30_uid_5103_v2_00220-00235_video,/workspace/PSI_change/video_llama2_bbox/video_0204_track_2_00220-00235.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the road, facing the camera, and appears to be waiting or preparing to move. There is no visible motion indicating a clear crossing action at this moment.
+warrant: If the pedestrian is stationary and facing the camera, they are likely waiting for a safe opportunity to cross rather than actively crossing.
+answer: no","grounds: The pedestrian is already in the parking lane near a car and is facing the vehicle. They remain close to the car and do not turn toward the roadway.
+warrant: People who are oriented toward a vehicle and positioned near it typically tend to be preparing to enter or assist with the vehicle instead of initiating a crossing.
+answer: no"
+video_0187_track_27_nlp_vid_19_uid_4523_v2_00070-00085_video,/workspace/PSI_change/video_llama2_bbox/video_0187_track_27_00070-00085.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an immediate intention to cross.
+warrant: When pedestrians intend to cross, they typically move closer to the curb or begin stepping onto the road; since the pedestrian remains stationary and distant from the lane, crossing is unlikely.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0157_track_57_nlp_vid_58_uid_5328_v2_00364-00379_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_57_00364-00379.mp4,yes,yes,True,no,True,"grounds: The pedestrian is walking across the parking lot, moving from left to right, and appears to be approaching the vehicle's path.
+warrant: When a pedestrian is walking across a parking lot toward a vehicle's path, it indicates an intention to cross the area.
+answer: yes","grounds: The pedestrian is already in the parking lane and is increasing speed. They are running toward a building and moving away from the ego vehicle's path.
+warrant: A person who is already in the travel lane and accelerates while moving away from a vehicle typically intends to clear the lane instead of entering it.
+answer: no"
+video_0189_track_25_nlp_vid_7_uid_4973_v2_00120-00135_video,/workspace/PSI_change/video_llama2_bbox/video_0189_track_25_00120-00135.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the road, facing the vehicle, and appears to be waiting or preparing to cross. There is no visible movement indicating they have started crossing yet.
+warrant: If a pedestrian is stationary and facing the vehicle, it suggests they are waiting for a safe moment to cross rather than actively crossing.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0177_track_36_nlp_vid_45_uid_4995_v2_00419-00434_video,/workspace/PSI_change/video_llama2_bbox/video_0177_track_36_00419-00434.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the sidewalk near the corner, facing away from the camera, with no immediate movement toward the road or crossing action.
+warrant: When pedestrians stand on the sidewalk facing away from the camera without moving toward the road, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is in the parking lane near the left edge and is walking slowly. No crosswalk is visible, and a car is parked very close nearby.
+warrant: Pedestrians moving slowly in a parking lane near a parked vehicle often tend to be aligning with the vehicle or preparing for a turn, rather than initiating a crossing.
+answer: no"
+video_0151_track_1_nlp_vid_36_uid_4660_v2_00090-00105_video,/workspace/PSI_change/video_llama2_bbox/video_0151_track_1_00090-00105.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the right side of the road, facing the camera, and appears stationary with no immediate movement toward the crosswalk or roadway.
+warrant: When pedestrians are positioned near a road and face the camera, they are likely preparing to cross if they begin moving forward.
+answer: no","grounds: The pedestrian is already in the roadway to the right of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0151_track_1_nlp_vid_34_uid_4663_v2_00020-00035_video,/workspace/PSI_change/video_llama2_bbox/video_0151_track_1_00020-00035.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the right side of the road, facing away from the camera, with no visible movement toward the roadway or crossing action.
+warrant: When pedestrians are stationary and not oriented toward the road, they are unlikely to start crossing immediately.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0157_track_55_nlp_vid_26_uid_4637_v2_00223-00238_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_55_00223-00238.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the parking lot, moving from left to right, and appears to be approaching the area near the white sedan.
+warrant: When a pedestrian is walking across a parking lot toward a specific area, it indicates an intention to cross the space.
+answer: yes","grounds: The pedestrian is already in the parking lane near the ego vehicle and is increasing speed. They are moving toward the ego vehicle’s path and are near a pedestrian crossing gate.
+warrant: A person who is accelerating while aligned with a vehicle’s path and is close to a crossing point typically intends to proceed across.
+answer: yes"
+video_0159_track_7_nlp_vid_30_uid_4761_v2_00080-00095_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_7_00080-00095.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting to cross. There is no visible movement indicating they are about to step into the road at this moment.
+warrant: When pedestrians are stationary on the sidewalk facing the street, they are likely preparing to cross, so the intention is to cross.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0159_track_8_nlp_vid_33_uid_5345_v2_00160-00175_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_8_00160-00175.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting to cross. There is no visible movement indicating a change in position or intention to cross at this moment.
+warrant: A pedestrian standing still on the sidewalk while facing the street typically indicates an intention to cross once they feel it is safe.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0182_track_20_nlp_vid_62_uid_5389_v2_00151-00166_video,/workspace/PSI_change/video_llama2_bbox/video_0182_track_20_00151-00166.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. They remain stationary throughout the observed frames, showing no movement toward the crosswalk or any indication of preparing to cross.
+warrant: When a pedestrian stands on the sidewalk facing away from the crosswalk without moving toward it, they are unlikely to intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0189_track_26_nlp_vid_50_uid_4828_v2_00260-00275_video,/workspace/PSI_change/video_llama2_bbox/video_0189_track_26_00260-00275.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an immediate intention to cross.
+warrant: When pedestrians intend to cross, they typically move closer to the roadway or shift their stance toward the street, which is not observed here.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0150_track_3_nlp_vid_43_uid_4808_v2_00200-00215_video,/workspace/PSI_change/video_llama2_bbox/video_0150_track_3_00200-00215.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the parking lot, moving from left to right relative to the camera. They are not near any vehicles and appear to be following a straight path.
+warrant: When a pedestrian moves steadily across an open area without changing direction or speed, it indicates an intention to cross the space.
+answer: yes","grounds: The pedestrian is already in the parking lane between parked cars and is walking slowly while looking toward the ego vehicle. A crosswalk is present to the left in a commercial area with many pedestrians.
+warrant: Pedestrians who are oriented toward a roadway and scanning a vehicle often tend to be preparing to enter or cross it.
+answer: yes"
+video_0187_track_28_nlp_vid_52_uid_5103_v2_00140-00155_video,/workspace/PSI_change/video_llama2_bbox/video_0187_track_28_00140-00155.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing away from the camera, and appears stationary with no immediate movement toward the road or crossing area.
+warrant: When pedestrians are on the sidewalk and not moving toward the crosswalk or road, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0159_track_5_nlp_vid_48_uid_4761_v2_00200-00215_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_5_00200-00215.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting to cross. There is no visible movement indicating a change in position or intention to cross at this moment.
+warrant: A pedestrian standing still on the sidewalk while facing the street typically indicates an intention to cross once they feel it is safe.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0200_track_45_nlp_vid_65_uid_4523_v2_00213-00228_video,/workspace/PSI_change/video_llama2_bbox/video_0200_track_45_00213-00228.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing near the center of the road, facing the camera, and appears to be holding an object. There is no visible movement indicating a crossing intention at this moment.
+warrant: If the pedestrian begins to move forward or sideways while maintaining orientation toward the road, it would suggest an intention to cross.
+answer: no","grounds: The pedestrian is already in the parking lane between parked cars and is walking toward the ego vehicle. They are looking toward the ego vehicle while moving closer to it.
+warrant: A person who is already in the travel lane and approaching a vehicle typically intends to reach it, often to open a door or enter.
+answer: yes"
+video_0192_track_27_nlp_vid_9_uid_4995_v2_00228-00243_video,/workspace/PSI_change/video_llama2_bbox/video_0192_track_27_00228-00243.mp4,yes,yes,True,no,True,"grounds: The pedestrian is walking across the road, moving from left to right within the frame. They are positioned in the middle of the roadway, indicating they are actively crossing rather than waiting at the curb.
+warrant: When a pedestrian is seen walking through the middle of the road, it typically indicates an intention to cross the street.
+answer: yes","grounds: The pedestrian is already in the parking lane near the ego vehicle and is moving toward the ego vehicle. The pedestrian is looking downward and has not yet turned toward the roadway.
+warrant: A person who is oriented toward a vehicle and not scanning traffic typically does not begin crossing immediately.
+answer: no"
+video_0196_track_32_nlp_vid_27_uid_5345_v2_00377-00392_video,/workspace/PSI_change/video_llama2_bbox/video_0196_track_32_00377-00392.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk near the intersection, facing away from the camera. There is no visible movement or change in posture indicating an imminent crossing action.
+warrant: A pedestrian standing still on the sidewalk without showing signs of movement typically does not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0187_track_27_nlp_vid_29_uid_5115_v2_00060-00075_video,/workspace/PSI_change/video_llama2_bbox/video_0187_track_27_00060-00075.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an immediate intention to cross.
+warrant: When pedestrians intend to cross, they typically move closer to the roadway or shift their stance toward the crossing point, which is not observed here.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0177_track_36_nlp_vid_56_uid_5112_v2_00344-00359_video,/workspace/PSI_change/video_llama2_bbox/video_0177_track_36_00344-00359.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk near the curb, facing away from the camera, and appears stationary with no immediate movement toward the road.
+warrant: When pedestrians stand near the curb and face away from the camera without moving toward the road, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0159_track_7_nlp_vid_46_uid_4796_v2_00120-00135_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_7_00120-00135.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing away from the camera, and shows no immediate movement toward the road or crosswalk.
+warrant: When pedestrians are stationary on the sidewalk and not oriented toward the roadway, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0177_track_35_nlp_vid_58_uid_4738_v2_00300-00315_video,/workspace/PSI_change/video_llama2_bbox/video_0177_track_35_00300-00315.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is standing on the road near the center, facing the camera, and appears to be preparing to cross. There is no visible movement indicating a change in position or direction at this moment.
+warrant: When a pedestrian stands still in the middle of the road while facing the camera, it typically indicates an intention to cross the street.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0189_track_25_nlp_vid_27_uid_4936_v2_00080-00095_video,/workspace/PSI_change/video_llama2_bbox/video_0189_track_25_00080-00095.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the left side of the road, facing the ego vehicle, and appears to be waiting or preparing to cross. There is no visible movement indicating a change in position or intention to cross at this moment.
+warrant: If the pedestrian is stationary and facing the ego vehicle, it suggests they are waiting for a safe opportunity to cross rather than actively crossing.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0164_track_49_nlp_vid_11_uid_5295_v2_00095-00110_video,/workspace/PSI_change/video_llama2_bbox/video_0164_track_49_00095-00110.mp4,no,yes,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting to cross. There is no visible movement indicating they are about to step into the road at this moment.
+warrant: When pedestrians are stationary on the sidewalk facing the street, they are likely preparing to cross, so the intention is to cross.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0148_track_5_nlp_vid_4_uid_4973_v2_00301-00316_video,/workspace/PSI_change/video_llama2_bbox/video_0148_track_5_00301-00316.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing on the porch of a house, facing away from the camera, and shows no movement or indication of stepping off the porch.
+warrant: When a pedestrian remains stationary on a porch without showing signs of movement, it suggests they do not intend to cross the road immediately.
+answer: no","grounds: The pedestrian is standing still very close to a building and is facing the road while near a crosswalk. No crosswalk signal is visible.
+warrant: People who are stationary and oriented toward the roadway near a crosswalk often tend to be checking for traffic before proceeding.
+answer: no"
+video_0204_track_45_nlp_vid_12_uid_5282_v2_00215-00230_video,/workspace/PSI_change/video_llama2_bbox/video_0204_track_45_00215-00230.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing on the left side of the road, facing the camera, with no visible movement indicating an intention to cross.
+warrant: If a pedestrian is stationary and not moving toward the roadway, it is unlikely they will suddenly start crossing.
+answer: no","grounds: The pedestrian is already in the parking lane beside a car and is facing the vehicle. They remain close to the car and do not turn toward the roadway.
+warrant: People who are oriented toward a vehicle and positioned next to it typically tend to be boarding or interacting with the vehicle instead of initiating a crossing.
+answer: no"
+video_0158_track_63_nlp_vid_35_uid_4941_v2_00305-00349_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_63_00305-00349.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the left side of the road, facing away from the camera, with no immediate movement toward the roadway.
+warrant: When pedestrians stand near a road without moving toward it, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the parking lane and is increasing speed. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0196_track_32_nlp_vid_29_uid_5226_v2_00287-00302_video,/workspace/PSI_change/video_llama2_bbox/video_0196_track_32_00287-00302.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right, facing away from the crosswalk, and shows no movement toward entering it.
+warrant: When a pedestrian is stationary on the sidewalk and not oriented toward the crosswalk, they are unlikely to start crossing immediately.
+answer: no","grounds: A pedestrian is already in the crosswalk and has begun running, moving toward the left side of the road. The vehicle is slowing down, and the pedestrian’s path is oriented across the lane.
+warrant: A person who is already in the crosswalk and running typically intends to complete the crossing quickly, often to avoid approaching traffic.
+answer: yes"
+video_0177_track_36_nlp_vid_56_uid_5112_v2_00429-00444_video,/workspace/PSI_change/video_llama2_bbox/video_0177_track_36_00429-00444.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the sidewalk near the corner, facing away from the camera, with no immediate movement toward the road or crossing action.
+warrant: When pedestrians stand on the sidewalk facing away from the camera without moving toward the road, it usually indicates they do not intend to cross immediately.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing the parked vehicle. No crosswalk is present, and a driver is near a building entrance.
+warrant: People who are stationary and oriented toward a parked vehicle often tend to be waiting or interacting with it instead of initiating a crossing immediately.
+answer: no"
+video_0170_track_1_nlp_vid_56_uid_4657_v2_00363-00378_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_1_00363-00378.mp4,no,yes,True,yes,True,"grounds: The pedestrian is walking across the road in front of the ego vehicle, moving from the sidewalk toward the opposite side. Their path is directly in the vehicle's lane, indicating an intention to cross.
+warrant: When a pedestrian moves from the sidewalk into the vehicle's lane while approaching the opposite side, it signals a clear crossing intention.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0164_track_49_nlp_vid_32_uid_5093_v2_00075-00090_video,/workspace/PSI_change/video_llama2_bbox/video_0164_track_49_00075-00090.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the left of the road, facing forward and appearing stationary. There is no indication of movement toward the roadway or any change in posture suggesting an imminent crossing.
+warrant: When a pedestrian remains stationary on the sidewalk without showing signs of moving toward the road, it typically indicates no immediate intention to cross.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0158_track_63_nlp_vid_55_uid_5389_v2_00165-00180_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_63_00165-00180.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the road, moving from left to right, and is clearly in the process of crossing the lane.
+warrant: When a pedestrian is observed walking across the road within the lane, it indicates an active crossing intention.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0159_track_6_nlp_vid_16_uid_4760_v1_00260-00275_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_6_00260-00275.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing away from the camera, and shows no immediate movement toward the road or crosswalk.
+warrant: When a pedestrian remains stationary on the sidewalk without approaching the roadway, it usually indicates they do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0204_track_45_nlp_vid_13_uid_4995_v2_00315-00330_video,/workspace/PSI_change/video_llama2_bbox/video_0204_track_45_00315-00330.mp4,no,yes,True,yes,True,"grounds: The pedestrian is walking across the parking lot, moving from left to right relative to the camera. Their pace is steady and they are not stopping or changing direction.
+warrant: When a pedestrian moves steadily across an open area like a parking lot without hesitation, it indicates a clear crossing intention.
+answer: yes","grounds: The pedestrian is already in the parking-lane and is increasing distance from the car while walking. They are moving toward the right side of the frame and are not looking back.
+warrant: A person who is walking away from a vehicle and moving toward an open lane typically intends to keep crossing to reach the other side.
+answer: yes"
+video_0170_track_1_nlp_vid_53_uid_5282_v2_00293-00308_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_1_00293-00308.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing near the sidewalk, facing the street, and appears to be preparing to cross. There is no visible movement indicating a change in position or direction at this moment.
+warrant: When a pedestrian stands near the curb and faces the street without moving, it usually means they are waiting for a safe opportunity to cross.
+answer: no","grounds: The pedestrian is already in the parking lane and is walking slowly while looking toward the approaching vehicle. The pedestrian is near the ego vehicle and is in close proximity to the roadway.
+warrant: A person who is already in the parking lane and oriented toward the road while close to a vehicle typically intends to keep crossing to reach the other side.
+answer: yes"
+video_0157_track_55_nlp_vid_26_uid_4523_v2_00423-00438_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_55_00423-00438.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing near the entrance of a building, facing away from the camera, and appears stationary with no immediate movement toward crossing the road.
+warrant: When pedestrians are near building entrances and remain stationary, they are likely waiting to cross rather than intending to cross immediately.
+answer: no","grounds: The pedestrian is already in the parking lane and is increasing speed while running. They are moving toward a gap between parked cars.
+warrant: A person who is already in a travel lane and accelerates while angling toward a space between vehicles typically intends to keep crossing that gap.
+answer: yes"
+video_0157_track_55_nlp_vid_18_uid_5328_v2_00203-00218_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_55_00203-00218.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is standing in the middle of the road, facing the camera, and appears to be waiting or preparing to move. There is no visible motion blur or significant change in position, indicating they are stationary at this moment.
+warrant: When a pedestrian stands in the middle of the road while facing the vehicle, it typically indicates an intention to cross, as they are positioned directly in the path of travel.
+answer: yes","grounds: The pedestrian is already in the parking lane and is increasing speed. They are moving toward a gap between approaching vehicles.
+warrant: A person who is already in the travel lane and accelerates toward a vehicle gap typically intends to proceed across rather than stop or turn.
+answer: yes"
+video_0172_track_2_nlp_vid_30_uid_4970_v2_00235-00250_video,/workspace/PSI_change/video_llama2_bbox/video_0172_track_2_00235-00250.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the road near a parked utility truck, facing away from the camera. There is no visible movement indicating an intention to cross the street at this moment.
+warrant: When pedestrians are stationary near vehicles or obstacles, they are less likely to intend to cross immediately unless there is a clear indication of movement toward the crossing area.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing the road. No crosswalk is visible, and a vehicle is passing nearby.
+warrant: People who are stationary and oriented toward the road near a parked car often tend to be waiting or observing rather than initiating a crossing immediately.
+answer: no"
+video_0157_track_55_nlp_vid_32_uid_4535_v2_00293-00308_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_55_00293-00308.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the parking lot, moving from left to right, and appears to be following a curved path while maintaining a steady pace.
+warrant: When a pedestrian moves across a parking lot in a curved trajectory while other pedestrians are also crossing, it suggests an intention to continue crossing the area.
+answer: yes","grounds: The pedestrian is already in the parking lane and is increasing speed while running. They are moving toward the ego vehicle’s path and are positioned to the left of a crossing pedestrian.
+warrant: A person who is already in the travel lane and accelerates while approaching a vehicle typically intends to keep crossing to reach the opposite side.
+answer: yes"
+video_0170_track_0_nlp_vid_6_uid_5234_v2_00217-00232_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_0_00217-00232.mp4,yes,yes,True,yes,True,"grounds: The pedestrian in the yellow shirt is walking across the road, moving from left to right, while another pedestrian follows behind. The target pedestrian is clearly in the process of crossing the roadway.
+warrant: When a pedestrian is observed walking across a road, it indicates an active crossing intention.
+answer: yes","grounds: The pedestrian is already in the parking lane and is increasing distance from the car while walking. They are moving toward the sidewalk and are not looking at the vehicle.
+warrant: A person who is walking away from a vehicle and aligning with the sidewalk typically intends to clear the travel lane instead of entering it.
+answer: yes"
+video_0170_track_1_nlp_vid_5_uid_5103_v2_00433-00448_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_1_00433-00448.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing near the right side of the road, close to the curb and trash bins, but remains stationary throughout the video. There is no indication of movement toward the roadway or any change in position that suggests an intention to cross.
+warrant: If a pedestrian is standing near the curb without moving toward the road, it typically indicates no immediate crossing intention.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing the parked vehicle. No crosswalk is present, and a driver is near a building entrance.
+warrant: People who are stationary and oriented toward a parked vehicle often tend to be waiting or interacting with it instead of initiating a crossing immediately.
+answer: no"
+video_0190_track_54_nlp_vid_12_uid_4523_v2_00050-00065_video,/workspace/PSI_change/video_llama2_bbox/video_0190_track_54_00050-00065.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, remaining stationary throughout the observed frames. There is no indication of movement toward the roadway or any change in posture suggesting an imminent crossing action.
+warrant: When a pedestrian remains stationary on the sidewalk without showing signs of moving toward the road, it typically indicates no immediate intention to cross.
+answer: no","grounds: The pedestrian is in the right edge lane on a wet road and is very close to the ego vehicle. They are moving toward the sidewalk as if turning into a building.
+warrant: When someone is moving away from the roadway edge toward a building, they typically complete their turn and do not step into the lane to cross immediately.
+answer: no"
+video_0163_track_1_nlp_vid_3_uid_4830_v2_00185-00200_video,/workspace/PSI_change/video_llama2_bbox/video_0163_track_1_00185-00200.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing in the middle of the road, partially blocking the lane, and appears to be waiting or preparing to cross. There is no visible movement indicating they are about to step off the curb.
+warrant: When a pedestrian stands in the middle of the road without moving toward the sidewalk or curb, it suggests they are not intending to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway between lanes and is increasing speed toward a building. They are moving across the street near the ego vehicle’s path.
+warrant: A person who is already in the road and accelerates while moving away from traffic typically intends to complete the crossing.
+answer: yes"
+video_0152_track_31_nlp_vid_35_uid_5103_v2_00040-00055_video,/workspace/PSI_change/video_llama2_bbox/video_0152_track_31_00040-00055.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing near the center of the frame, facing away from the camera, and appears stationary with no immediate movement toward the vehicle or other pedestrians.
+warrant: When a pedestrian stands still in an open area without approaching vehicles or other people, it usually indicates they are not intending to cross the road immediately.
+answer: no","grounds: The pedestrian is already in the parking lane near the ego vehicle and is moving toward the ego vehicle. The pedestrian is walking at a moderate speed while carrying a bag.
+warrant: A person who is already in the parking lane and walking directly toward a vehicle typically intends to complete the approach rather than delay it.
+answer: yes"
+video_0203_track_0_nlp_vid_53_uid_4828_v2_00169-00184_video,/workspace/PSI_change/video_llama2_bbox/video_0203_track_0_00169-00184.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the road in the middle of the intersection, moving from one side to the other while maintaining a steady pace.
+warrant: When a pedestrian is seen walking across the road in the middle of the intersection, it indicates they have the intention to cross.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0178_track_36_nlp_vid_8_uid_4735_v2_00150-00165_video,/workspace/PSI_change/video_llama2_bbox/video_0178_track_36_00150-00165.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an imminent crossing action.
+warrant: When pedestrians intend to cross, they typically move toward the street or shift their stance to prepare for crossing, which is not observed here.
+answer: no","grounds: The pedestrian is in the right lane on a narrow road and is increasing speed. No crosswalk is visible, and a car is to the left.
+warrant: A pedestrian who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0186_track_39_nlp_vid_13_uid_4523_v2_00060-00075_video,/workspace/PSI_change/video_llama2_bbox/video_0186_track_39_00060-00075.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing near the sidewalk on the right side of the road, facing away from the camera. There is no visible movement or change in position throughout the frames.
+warrant: If the pedestrian were intending to cross, they would likely move toward the road or show signs of preparing to cross, but they remain stationary and face away from the road.
+answer: no","grounds: The pedestrian is standing still very close to a traffic island and is facing the ego vehicle. They remain near this fixed roadside feature with no movement toward the roadway.
+warrant: People who are stationary and oriented toward a traffic island instead of the travel lane typically are not preparing to step into the road immediately.
+answer: no"
+video_0158_track_8_nlp_vid_35_uid_4941_v2_00285-00300_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_8_00285-00300.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the road, facing the vehicle, and appears to be waiting or preparing to cross. There is no visible movement indicating a change in position or direction at this moment.
+warrant: If the pedestrian is stationary and facing the vehicle, it suggests they are waiting for a safe opportunity to cross rather than actively moving toward the sidewalk.
+answer: no","grounds: The pedestrian is already in the parking lane and is increasing speed. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0172_track_2_nlp_vid_43_uid_4973_v2_00165-00180_video,/workspace/PSI_change/video_llama2_bbox/video_0172_track_2_00165-00180.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the left side of the road, facing the camera, with no visible movement or change in position throughout the frames.
+warrant: When a pedestrian stands stationary on the roadside without showing signs of movement, it usually indicates they are not intending to cross the road immediately.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing a worker in a reflective vest. They appear to be interacting with the worker near the vehicle.
+warrant: People engaged in a stationary conversation with another person near a parked car typically do not begin crossing immediately.
+answer: no"
+video_0156_track_26_nlp_vid_39_uid_5226_v2_00010-00025_video,/workspace/PSI_change/video_llama2_bbox/video_0156_track_26_00010-00025.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an immediate intention to cross.
+warrant: When pedestrians intend to cross, they typically shift their stance or begin moving toward the road; since neither action is observed, the likelihood of crossing is low.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0187_track_27_nlp_vid_60_uid_5328_v2_00180-00195_video,/workspace/PSI_change/video_llama2_bbox/video_0187_track_27_00180-00195.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the road near the crosswalk, facing away from the camera, and appears to be preparing to cross. There is no visible movement indicating they have started crossing yet.
+warrant: When a pedestrian stands on the road near a crosswalk without moving, it usually means they are waiting for a safe moment to cross.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0168_track_60_nlp_vid_1_uid_4884_v1_00177-00192_video,/workspace/PSI_change/video_llama2_bbox/video_0168_track_60_00177-00192.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the road, and appears stationary with no immediate movement toward the crosswalk or roadway.
+warrant: When pedestrians stand near a crosswalk without moving forward, they typically intend to wait rather than cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0191_track_46_nlp_vid_12_uid_4941_v2_00210-00225_video,/workspace/PSI_change/video_llama2_bbox/video_0191_track_46_00210-00225.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the crosswalk, partially obstructing the lane, and appears to be waiting or preparing to move. There is no clear indication of forward motion or crossing action at this moment.
+warrant: When a pedestrian stands still on a crosswalk without moving forward, it usually means they are not yet ready to cross.
+answer: no","grounds: The pedestrian is already in the parking lane near the ego vehicle and is moving toward the ego vehicle's path. They are walking at a steady pace while close to the ego vehicle.
+warrant: A person who is already in the travel lane and moving steadily toward a vehicle typically intends to keep crossing to complete the approach.
+answer: yes"
+video_0191_track_2_nlp_vid_3_uid_5103_v2_00355-00370_video,/workspace/PSI_change/video_llama2_bbox/video_0191_track_2_00355-00370.mp4,no,no,True,no,True,"grounds: The pedestrian is standing beside a shopping cart near the curb, facing away from the camera. There is no visible movement indicating an immediate intention to cross the street.
+warrant: When pedestrians are stationary near the curb without moving toward the center of the road, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing a pedestrian who is entering a vehicle. No crosswalk is visible, and a driver is near a building entrance.
+warrant: People who are stationary and oriented toward another person near a parked vehicle often tend to be waiting or interacting rather than initiating a crossing immediately.
+answer: no"
+video_0170_track_0_nlp_vid_6_uid_4688_v2_00267-00282_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_0_00267-00282.mp4,yes,yes,True,yes,True,"grounds: The pedestrian in the yellow shirt is walking across the road, moving from left to right, while another pedestrian stands nearby on the sidewalk.
+warrant: When a pedestrian is observed walking across a roadway, it indicates an intention to cross.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0188_track_87_nlp_vid_41_uid_4657_v2_00240-00255_video,/workspace/PSI_change/video_llama2_bbox/video_0188_track_87_00240-00255.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is already in the crosswalk, moving forward while holding an umbrella. Their body is oriented toward the street, and they are actively stepping across the lane markings.
+warrant: When a pedestrian is within the crosswalk and advancing toward the street, it indicates a clear crossing intention.
+answer: yes","grounds: The pedestrian is already in the crosswalk and is walking normally while using an umbrella. Other pedestrians are crossing nearby, and a cyclist is approaching in the roadway.
+warrant: Pedestrians who are mid-crosswalk and moving steadily typically keep progressing across rather than stopping abruptly.
+answer: yes"
+video_0159_track_15_nlp_vid_46_uid_4796_v2_00350-00365_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_15_00350-00365.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting or observing. There is no visible movement toward the road or crossing action at this moment.
+warrant: When a pedestrian stands on the sidewalk facing the street without moving toward the crosswalk, it usually indicates they are not intending to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0197_track_34_nlp_vid_25_uid_4663_v2_00180-00195_video,/workspace/PSI_change/video_llama2_bbox/video_0197_track_34_00180-00195.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk near the road, facing the street but not yet stepping into the crosswalk. There is no visible movement toward the road or interaction with traffic signals.
+warrant: A pedestrian on the sidewalk who remains stationary and does not approach the crosswalk is unlikely to intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0154_track_25_nlp_vid_51_uid_4663_v2_00140-00155_video,/workspace/PSI_change/video_llama2_bbox/video_0154_track_25_00140-00155.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the left side of the road, partially obscured by a green box, and remains stationary throughout the frames. There is no visible movement or change in position, suggesting the pedestrian is not actively crossing at this moment.
+warrant: If the pedestrian were intending to cross, they would likely move forward or adjust their stance, but since they remain stationary, it is unlikely they have crossing intention.
+answer: no","grounds: The pedestrian is in the parking lane near the road edge and is moving into the travel lane. This movement is oriented toward the ego vehicle’s path.
+warrant: When someone moves from a parking or edge lane into a travel lane, they typically intend to proceed across the roadway in the direction of the traffic flow.
+answer: yes"
+video_0152_track_31_nlp_vid_38_uid_5115_v2_00150-00165_video,/workspace/PSI_change/video_llama2_bbox/video_0152_track_31_00150-00165.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing near the curb, facing away from the camera, and appears stationary with no immediate movement toward the road or crossing action.
+warrant: When pedestrians are near the curb and facing away from the camera without moving toward the roadway, they are unlikely to start crossing immediately.
+answer: no","grounds: The pedestrian is standing still very close to the sidewalk and is facing the vehicle. No crosswalk is visible, and a pedestrian is already in the middle of the road to the left.
+warrant: People who are stationary and oriented toward a vehicle near the curb often tend to be waiting or acknowledging someone instead of initiating a crossing immediately.
+answer: no"
+video_0194_track_44_nlp_vid_46_uid_5112_v2_00140-00155_video,/workspace/PSI_change/video_llama2_bbox/video_0194_track_44_00140-00155.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an imminent crossing action.
+warrant: When pedestrians intend to cross, they typically move closer to the roadway or shift their stance toward the street; since the pedestrian remains stationary and distant, the likelihood of crossing is low.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0159_track_7_nlp_vid_7_uid_5226_v2_00293-00308_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_7_00293-00308.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing away from the camera, and shows no immediate movement toward the road or crosswalk.
+warrant: When pedestrians are stationary on the sidewalk and not oriented toward the road, they typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0166_track_0_nlp_vid_1_uid_4791_v1_00201-00216_video,/workspace/PSI_change/video_llama2_bbox/video_0166_track_0_00201-00216.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing in the middle of the road, partially obstructing the lane, and appears to be waiting or preparing to cross. There is no visible movement indicating they are about to step off the curb immediately.
+warrant: When a pedestrian stands still in the middle of the road, it usually indicates they are waiting for a safe gap in traffic or a signal to cross.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0156_track_26_nlp_vid_38_uid_5295_v2_00050-00065_video,/workspace/PSI_change/video_llama2_bbox/video_0156_track_26_00050-00065.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an immediate intention to cross.
+warrant: When pedestrians intend to cross, they typically shift their stance or begin moving toward the street; since neither action is observed, the likelihood of crossing is low.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0159_track_8_nlp_vid_51_uid_4814_v2_00160-00175_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_8_00160-00175.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing the street, and appears to be waiting to cross. There is no visible movement indicating a change in position or intention to cross at this moment.
+warrant: A pedestrian standing still on the sidewalk while facing the street typically indicates an intention to cross once they feel it is safe.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0157_track_55_nlp_vid_32_uid_4535_v2_00393-00408_video,/workspace/PSI_change/video_llama2_bbox/video_0157_track_55_00393-00408.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing near the entrance of a building, facing away from the camera. There is no visible movement or change in position throughout the frames.
+warrant: If the pedestrian were intending to cross, they would likely start moving forward or turn toward the street; however, their stationary posture and lack of directional cues suggest otherwise.
+answer: no","grounds: The pedestrian is already in the parking lot near a building entrance and is walking toward the right side. No crosswalk is visible, and a crosswalk is present to the left.
+warrant: People who are moving laterally across an open area without approaching a specific crossing typically keep their current path.
+answer: yes"
+video_0172_track_2_nlp_vid_7_uid_5347_v2_00235-00250_video,/workspace/PSI_change/video_llama2_bbox/video_0172_track_2_00235-00250.mp4,no,no,True,no,True,"grounds: The pedestrian is standing on the road near a parked utility truck, facing away from the camera. There is no visible movement indicating an intention to cross the street at this moment.
+warrant: When pedestrians are stationary near vehicles or obstacles, they are less likely to intend to cross immediately unless there is a clear indication of movement toward the crossing area.
+answer: no","grounds: The pedestrian is standing still very close to a parked car and is facing the road. No crosswalk is visible, and a vehicle is passing nearby.
+warrant: People who are stationary and oriented toward the road near a parked car often tend to be waiting or observing rather than initiating a crossing immediately.
+answer: no"
+video_0164_track_49_nlp_vid_66_uid_4995_v2_00075-00090_video,/workspace/PSI_change/video_llama2_bbox/video_0164_track_49_00075-00090.mp4,no,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the left of the road, facing forward and appearing stationary. There is no indication of movement toward the roadway or any change in posture suggesting an imminent crossing.
+warrant: When a pedestrian remains stationary on the sidewalk without showing signs of moving toward the road, it typically indicates no immediate intention to cross.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0177_track_35_nlp_vid_44_uid_4729_v2_00380-00395_video,/workspace/PSI_change/video_llama2_bbox/video_0177_track_35_00380-00395.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the left side of the road, facing away from the camera, with no visible movement toward the center of the road or any indication of starting to cross.
+warrant: When a pedestrian stands still on the roadside without moving toward the road or showing signs of crossing, it usually means they do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0191_track_46_nlp_vid_58_uid_5347_v2_00320-00335_video,/workspace/PSI_change/video_llama2_bbox/video_0191_track_46_00320-00335.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is standing beside a shopping cart on the right side of the road, facing the center of the lane. They appear to be preparing to move forward but have not yet begun crossing. Their position relative to the lane markings suggests they may intend to cross ahead.
+warrant: When a pedestrian stands near the center of a lane while facing it, they are likely planning to cross directly in front of the vehicle.
+answer: yes","grounds: The pedestrian is already in the parking lane and is moving toward the ego vehicle. They are walking at a steady pace while looking toward the ego vehicle.
+warrant: A person who is oriented toward a vehicle and walking directly toward it typically intends to complete the approach across the lane.
+answer: yes"
+video_0170_track_0_nlp_vid_56_uid_4657_v2_00327-00342_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_0_00327-00342.mp4,yes,yes,True,yes,True,"grounds: The pedestrian in the yellow shirt is walking across the road, moving from the sidewalk toward the center of the street. Their body is oriented forward, and they are clearly in the process of crossing rather than standing still or preparing to turn.
+warrant: When a pedestrian is already in the middle of the road while walking, it indicates an active crossing intention.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0158_track_7_nlp_vid_38_uid_4936_v2_00052-00067_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_7_00052-00067.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk near the building entrance, facing away from the camera. There is no visible movement or change in posture indicating an imminent crossing action.
+warrant: When pedestrians intend to cross, they typically shift their stance or begin moving toward the street; since the pedestrian remains stationary and does not show such behavior, the likelihood of crossing is low.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0171_track_0_nlp_vid_59_uid_4738_v2_00180-00195_video,/workspace/PSI_change/video_llama2_bbox/video_0171_track_0_00180-00195.mp4,yes,no,True,no,True,"grounds: The pedestrian is standing near the entrance of a building on the right side of the road, facing away from the camera. There is no visible movement or change in position relative to the surroundings.
+warrant: When a pedestrian stands stationary near a building entrance without showing signs of movement, it usually indicates they are not intending to cross the road immediately.
+answer: no","grounds: The pedestrian is standing still very close to the sidewalk and is facing the store entrance. No crosswalk is visible, and a vehicle is parked near the pedestrian.
+warrant: People who are stationary and oriented toward a building entrance typically tend to be waiting or approaching the entrance instead of initiating a crossing.
+answer: no"
+video_0170_track_0_nlp_vid_50_uid_4729_v2_00147-00162_video,/workspace/PSI_change/video_llama2_bbox/video_0170_track_0_00147-00162.mp4,no,no,True,yes,True,"grounds: The pedestrian in the green box is walking along the left side of the road, moving away from the vehicle's path. There is no indication of them approaching a crosswalk or changing direction toward the center of the road.
+warrant: Pedestrians who are walking parallel to the road and not approaching a crosswalk typically do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the parking lane and is increasing distance from the sidewalk while near a building entrance. This pedestrian is moving toward a different lane instead of continuing toward the entrance.
+warrant: A person who is moving away from the sidewalk and increasing separation from the building typically is not preparing to enter immediately.
+answer: yes"
+video_0159_track_6_nlp_vid_6_uid_4813_v2_00140-00155_video,/workspace/PSI_change/video_llama2_bbox/video_0159_track_6_00140-00155.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk, facing away from the camera, and appears stationary with no immediate movement toward the road.
+warrant: When pedestrians are on the sidewalk and not moving toward the crosswalk or roadway, they are unlikely to intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway near the car and is moving toward the right sidewalk. This movement is oriented away from the road edge.
+warrant: A person who is already in the roadway and walking perpendicularly away from the curb typically intends to clear the road instead of entering it further.
+answer: yes"
+video_0194_track_44_nlp_vid_34_uid_4688_v2_00330-00345_video,/workspace/PSI_change/video_llama2_bbox/video_0194_track_44_00330-00345.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is walking across the road in front of the ego vehicle, moving from left to right within the lane. Their pace is steady and they are not stopping or changing direction.
+warrant: When a pedestrian walks directly across a lane in front of a vehicle, it indicates an intention to cross the street.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0163_track_33_nlp_vid_10_uid_4884_v2_00104-00119_video,/workspace/PSI_change/video_llama2_bbox/video_0163_track_33_00104-00119.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the left side of the road, facing the camera, and appears to be waiting to cross. There is no visible movement indicating they have started crossing yet.
+warrant: If a pedestrian is stationary and facing the road while other vehicles are passing, it suggests they are preparing to cross rather than having already begun.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0196_track_32_nlp_vid_37_uid_4813_v2_00387-00402_video,/workspace/PSI_change/video_llama2_bbox/video_0196_track_32_00387-00402.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk near the intersection, facing away from the camera. There is no visible movement or change in posture indicating an imminent crossing action.
+warrant: A pedestrian standing still on the sidewalk without showing signs of movement typically does not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the parking lane and is increasing speed. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0196_track_33_nlp_vid_29_uid_5226_v2_00100-00115_video,/workspace/PSI_change/video_llama2_bbox/video_0196_track_33_00100-00115.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the crosswalk. There is no visible movement toward the crosswalk or any indication that they are preparing to cross.
+warrant: When pedestrians are on the sidewalk and not moving toward the crosswalk, it usually means they do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0192_track_27_nlp_vid_22_uid_5115_v2_00168-00183_video,/workspace/PSI_change/video_llama2_bbox/video_0192_track_27_00168-00183.mp4,yes,yes,True,no,True,"grounds: The pedestrian is walking from left to right across the parking lot, moving steadily within the marked area. There are no abrupt changes in speed or direction, and the person remains within the designated path.
+warrant: When a pedestrian moves consistently across a parking lot without veering toward vehicles or stopping unexpectedly, it indicates an intention to cross the area rather than enter or exit it.
+answer: yes","grounds: The pedestrian is already in the parking lane near the left edge and is moving toward the left sidewalk. This movement is oriented away from the ego vehicle’s lane.
+warrant: When someone is walking parallel to a lane boundary instead of approaching it, they typically are not preparing to enter the lane immediately.
+answer: no"
+video_0154_track_25_nlp_vid_8_uid_4657_v2_00200-00215_video,/workspace/PSI_change/video_llama2_bbox/video_0154_track_25_00200-00215.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the right side of the road, facing the street, and appears to be waiting to cross. There is no visible movement indicating they have started crossing yet.
+warrant: When a pedestrian stands on the roadside facing the street without moving, it usually means they are preparing to cross rather than intending to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0190_track_54_nlp_vid_33_uid_4552_v2_00220-00235_video,/workspace/PSI_change/video_llama2_bbox/video_0190_track_54_00220-00235.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is in the middle of the crosswalk, actively stepping forward while holding an umbrella. Their body is oriented toward the street, and they are clearly moving from one side to the other.
+warrant: When a pedestrian is centrally located in the crosswalk and advancing toward the street, it indicates a clear crossing intention.
+answer: yes","grounds: The pedestrian is already in the roadway within the crosswalk and is increasing speed. They are moving toward the sidewalk opposite the car’s direction of travel.
+warrant: A person who is already in the crosswalk and accelerates typically intends to complete the crossing quickly, often to reach a destination on the far side.
+answer: yes"
+video_0191_track_46_nlp_vid_49_uid_5103_v2_00310-00325_video,/workspace/PSI_change/video_llama2_bbox/video_0191_track_46_00310-00325.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the crosswalk, holding a shopping cart and appears to be waiting to cross the street. There is no visible movement indicating they are about to step off the crosswalk.
+warrant: If the pedestrian is stationary on the crosswalk and not moving toward the curb or sidewalk, it suggests they do not intend to cross immediately.
+answer: no","grounds: The pedestrian is already in the parking lane and is moving toward the ego vehicle. They are walking at a steady pace while close to the ego lane and near a building entrance.
+warrant: A person who is already in the travel lane and walking toward a vehicle typically intends to keep crossing to complete the approach.
+answer: yes"
+video_0158_track_7_nlp_vid_2_uid_4828_v2_00232-00247_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_7_00232-00247.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the road, facing away from the camera, with no immediate movement observed. There is no clear indication of the pedestrian starting to cross the road at t+1.
+warrant: A pedestrian standing still on the road without visible movement or change in posture does not show a clear intention to cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0186_track_38_nlp_vid_36_uid_5262_v2_00340-00355_video,/workspace/PSI_change/video_llama2_bbox/video_0186_track_38_00340-00355.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or indication that the pedestrian is about to step into the roadway.
+warrant: When pedestrians intend to cross, they typically move toward the street or show preparatory movements like stepping forward; since the pedestrian remains stationary and does not exhibit such behavior, it is unlikely they have crossing intention.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0203_track_0_nlp_vid_52_uid_4936_v2_00149-00164_video,/workspace/PSI_change/video_llama2_bbox/video_0203_track_0_00149-00164.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the right side of the road, facing the vehicle, and appears to be preparing to cross. There is no visible movement indicating they have started crossing yet.
+warrant: When a pedestrian stands on the roadside facing the vehicle without moving, it usually means they are waiting to cross rather than actively crossing.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
+video_0160_track_13_nlp_vid_36_uid_4552_v2_00150-00165_video,/workspace/PSI_change/video_llama2_bbox/video_0160_track_13_00150-00165.mp4,yes,yes,True,yes,True,"grounds: The pedestrian is crossing the road in front of the ego vehicle, moving from left to right across the intersection. The pedestrian is fully within the crosswalk and appears to be completing their crossing motion.
+warrant: When a pedestrian is observed mid-crossing in the crosswalk, it indicates they have the intention to continue crossing the road.
+answer: yes","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0158_track_7_nlp_vid_38_uid_4936_v2_00082-00097_video,/workspace/PSI_change/video_llama2_bbox/video_0158_track_7_00082-00097.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the sidewalk to the right of the road, facing away from the camera. There is no visible movement or change in posture indicating an imminent crossing action.
+warrant: When pedestrians intend to cross, they typically move toward the roadway or shift their stance to face the street; since the pedestrian remains stationary and oriented away from the road, it is unlikely they will cross immediately.
+answer: no","grounds: The pedestrian is already in the roadway to the left of the car and has begun running. Their movement is oriented toward the sidewalk as if continuing across.
+warrant: A person who is already in the road and running in a directed path typically intends to complete the crossing quickly.
+answer: yes"
+video_0178_track_36_nlp_vid_34_uid_4754_v2_00250-00265_video,/workspace/PSI_change/video_llama2_bbox/video_0178_track_36_00250-00265.mp4,yes,no,True,yes,True,"grounds: The pedestrian is standing on the right side of the road, facing the driver's direction, and appears to be waiting or preparing to cross. There is no visible movement indicating a change in position or intention to cross at this moment.
+warrant: If the pedestrian is stationary and facing the driver's direction, it suggests they are waiting to cross rather than intending to cross immediately.
+answer: no","grounds: The pedestrian is already in the right lane and is increasing speed toward a jog. They remain some distance ahead of the ego vehicle.
+warrant: A person who is already in a travel lane and accelerates typically intends to keep progressing across rather than pause.
+answer: yes"
