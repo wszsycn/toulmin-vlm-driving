@@ -21,3 +21,6 @@ outputs/
 
 .env
 
+*.safetensors
+*.pt
+outputs/
