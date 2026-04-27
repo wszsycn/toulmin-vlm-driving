@@ -48,3 +48,10 @@ __pycache__/
 # ── Secrets ───────────────────────────────────────────────────────────────────
 .env
 *.key
+
+# ── Legacy / junk (untracked, keep on disk) ───────────────────────────────────
+*.ipynb
+*.ipynb_checkpoints/
+*.log
+psi_llava_frames_easy200/
+eval_outputs/
