@@ -1,0 +1,30 @@
+# configs/infer_toulmin_kto_v3.yaml
+# Inference + eval for the Toulmin-KTO v3 adapter on psi_test_eval_v2.jsonl.
+#
+# Run:
+#   CUDA_VISIBLE_DEVICES=1 python infer_eval.py --config configs/infer_toulmin_kto_v3.yaml
+#
+# Smoke test (5 records):
+#   CUDA_VISIBLE_DEVICES=1 python infer_eval.py --config configs/infer_toulmin_kto_v3.yaml --smoke
+
+model_id:     nvidia/Cosmos-Reason2-8B
+adapter_path: /workspace/checkpoints/toulmin_kto_v3
+format:       toulmin
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+eval_path:    /workspace/PSI_change/json_mode_90/psi_test_eval_v2.jsonl
+output_path:  /workspace/PSI_change/json_mode_90/predictions/toulmin_kto_v3_predictions.jsonl
+metrics_path: /workspace/PSI_change/json_mode_90/predictions/toulmin_kto_v3_metrics.json
+
+# ── Sampling (greedy) ─────────────────────────────────────────────────────────
+n_samples:      1
+temperature:    0.1
+top_p:          0.95
+max_new_tokens: 256
+seed:           42
+do_sample:      false
+
+# ── Video decoding (must match training) ─────────────────────────────────────
+num_video_frames:     90
+frame_size:           112
+max_pixels_per_frame: 12544

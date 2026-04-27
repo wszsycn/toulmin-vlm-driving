@@ -18,13 +18,14 @@ from sentence_transformers import SentenceTransformer
 # =========================================================
 # 1. Config
 # =========================================================
-TEST_JSONL = "/workspace/psi_video_eval_1000.jsonl"
+# TEST_JSONL = "/workspace/psi_video_eval_1000.jsonl"
+TEST_JSONL = "/workspace/PSI_change/json_mode_90/psi_90f_test_eval.jsonl"
 
 BASE_MODEL_NAME = "nvidia/Cosmos-Reason2-8B"
-FT_ADAPTER_PATH = "/workspace/outputs/Cosmos-Reason2-8B-psi-video-sft"
-GRPO_ADAPTER_PATH = "/workspace/outputs/Cosmos-Reason2-8B-psi-grpo-from-sft"   # 改成你的GRPO输出目录
+FT_ADAPTER_PATH = "/workspace/outputs/Cosmos-Reason2-8B-psi-video-90f-sft"
+GRPO_ADAPTER_PATH = "/workspace/outputs/Cosmos-Reason2-8B-psi-video-90f-grpo"   # 改成你的GRPO输出目录
 
-OUTPUT_DIR = "/workspace/eval_outputs/cosmos_video_compare_3models"
+OUTPUT_DIR = "/workspace/eval_outputs/cosmos_video_compare_3models_90f"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # 顺序评测最稳：都放同一张 GPU，避免来回抢
@@ -32,8 +33,8 @@ BASE_DEVICE = 0
 FT_DEVICE = 0
 GRPO_DEVICE = 0
 
-MAX_SAMPLES = 100   # 保证三者都用同样的前100条
-MAX_NEW_TOKENS = 96
+MAX_SAMPLES = 400   # 保证三者都用同样的前100条
+MAX_NEW_TOKENS = 256
 
 SBERT_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
@@ -98,7 +99,7 @@ def print_example(sample: Dict[str, Any], idx: int):
     print("=" * 100)
     print(f"Example {idx}")
     print("ID:", sample["id"])
-    print("Video:", sample["video_path"])
+    print("Video:", sample["video"])
     print("GT answer:", sample["ground_truth_answer"])
     print("\nSystem:")
     print(sample["messages"][0]["content"][0]["text"])
@@ -221,7 +222,7 @@ def evaluate_model(model, processor, samples: List[Dict[str, Any]], tag: str, ma
 
         outputs.append({
             "id": sample["id"],
-            "video_path": sample["video_path"],
+            "video": sample["video"],
             "ground_truth_answer": sample["ground_truth_answer"],
             "ground_truth_text": sample["ground_truth_text"],
             "pred_text": pred_text,
@@ -399,7 +400,7 @@ def main():
     for sample, base_r, ft_r, grpo_r in zip(samples, base_outputs, ft_outputs, grpo_outputs):
         merged_results.append({
             "id": sample["id"],
-            "video_path": sample["video_path"],
+            "video": sample["video"],
             "ground_truth_answer": sample["ground_truth_answer"],
             "ground_truth_text": sample["ground_truth_text"],
 
@@ -433,7 +434,7 @@ def main():
         merged_results,
         f"{OUTPUT_DIR}/compare_results_3models.csv",
         fieldnames=[
-            "id", "video_path", "ground_truth_answer",
+            "id", "video", "ground_truth_answer",
             "base_pred_answer", "base_format_ok",
             "ft_pred_answer", "ft_format_ok",
             "grpo_pred_answer", "grpo_format_ok",

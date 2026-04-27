@@ -1,26 +1,50 @@
-
+# ── Videos & images ──────────────────────────────────────────────────────────
 *.mp4
-
 *.avi
-
 *.mov
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.npy
 
-__pycache__/
-
-*.pyc
-
+# ── Model weights ─────────────────────────────────────────────────────────────
 *.pth
-
-*.bin
-
-*.safetensors
-
-outputs/
-
-*.jsonl
-
-.env
-
-*.safetensors
 *.pt
+*.bin
+*.safetensors
+checkpoints/
 outputs/
+
+# ── Data files (large) ────────────────────────────────────────────────────────
+*.jsonl
+*.csv
+*.json
+
+# ── Data pipeline artifacts ───────────────────────────────────────────────────
+PSI_change/json_mode_90/agent_cache*/
+PSI_change/json_mode_90/quality_cache/
+PSI_change/json_mode_90/grpo_frames/
+PSI_change/json_mode_90/test_videos/
+PSI_change/json_mode_90/videos/
+PSI_change/json_mode_90/trf_train/
+PSI_change/json_mode_90/trf_train_v3/
+PSI_change/json_mode_90/predictions/
+PSI_change/json_mode_90/__pycache__/
+
+# ── Logs & outputs ────────────────────────────────────────────────────────────
+logs/
+eval_outputs/
+Gemini_Output/
+/tmp/
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
+*.key

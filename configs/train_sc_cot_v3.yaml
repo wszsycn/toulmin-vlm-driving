@@ -1,0 +1,50 @@
+# configs/train_sc_cot_v3.yaml
+# SC CoT-SFT v3: self-consistency CoT baseline (N=6 majority vote).
+# Matched-compute comparison to Toulmin-SFT v3 — same intersection records,
+# same tricks, different completion format (<thinking>...</thinking> + answer:).
+#
+# SC CoT has no debate margin; stage is assigned by vote unanimity
+# (5/6 or 6/6 → stage 1, else stage 2). sample_weight uses aggregated_intent.
+#
+# Run:
+#   CUDA_VISIBLE_DEVICES=1 python train_sft.py --config configs/train_sc_cot_v3.yaml
+#
+# Smoke test:
+#   CUDA_VISIBLE_DEVICES=1 python train_sft.py --config configs/train_sc_cot_v3.yaml --smoke
+
+model_id: nvidia/Cosmos-Reason2-8B
+format: sc_cot
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+train_path: /workspace/PSI_change/json_mode_90/trf_train_v3/psi_sft_sc_cot_matched_train.jsonl
+val_path:   /workspace/PSI_change/json_mode_90/trf_train_v3/psi_sft_sc_cot_matched_val.jsonl
+output_dir: /workspace/checkpoints/sc_cot_sft_v3
+
+# ── Training hyperparameters ──────────────────────────────────────────────────
+num_train_epochs: 3
+learning_rate: 1.0e-4
+gradient_accumulation_steps: 8
+warmup_ratio: 0.05
+lr_scheduler_type: cosine
+logging_steps: 10
+seed: 42
+
+# ── v3 curriculum + weighting ─────────────────────────────────────────────────
+curriculum_stage: auto     # stage-1 = unanimity >= 5/6; stage-2 = remainder
+use_sample_weight: true    # sample_weight from aggregated_intent
+
+# ── Checkpoint / eval strategy ────────────────────────────────────────────────
+save_strategy: steps
+save_total_limit: 3
+eval_strategy: steps
+eval_steps: 100
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+early_stopping_patience: 2
+early_stopping_threshold: 0.005
+lora_dropout: 0.1
+
+# ── Video decoding ────────────────────────────────────────────────────────────
+num_video_frames: 90
+frame_size: 112
+max_pixels_per_frame: 12544

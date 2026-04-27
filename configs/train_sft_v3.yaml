@@ -1,0 +1,60 @@
+# configs/train_sft_v3.yaml
+# Toulmin-SFT v3: matched intersection, curriculum (stage field), sample weights.
+#
+# Key v3 changes vs toulmin_sft.yaml:
+#   - trf_train_v3 matched data (593 pairs, filtered by Trick 1 asymmetric margin)
+#   - curriculum_stage: auto  →  stage-1 records first, then stage-1+2 together
+#   - use_sample_weight: true  →  per-record sample_weight field drives loss scaling
+#   - save/eval strategy for best-checkpoint selection
+#
+# Run:
+#   CUDA_VISIBLE_DEVICES=1 python train_sft.py --config configs/train_sft_v3.yaml
+#
+# Smoke test:
+#   CUDA_VISIBLE_DEVICES=1 python train_sft.py --config configs/train_sft_v3.yaml --smoke
+
+model_id: nvidia/Cosmos-Reason2-8B
+format: toulmin
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+train_path: /workspace/PSI_change/json_mode_90/trf_train_v3/psi_sft_toulmin_matched_train.jsonl
+val_path:   /workspace/PSI_change/json_mode_90/trf_train_v3/psi_sft_toulmin_matched_val.jsonl
+output_dir: /workspace/checkpoints/toulmin_sft_v3
+
+# ── Training hyperparameters ──────────────────────────────────────────────────
+num_train_epochs: 3
+learning_rate: 1.0e-4
+gradient_accumulation_steps: 8
+warmup_ratio: 0.05
+lr_scheduler_type: cosine
+logging_steps: 10
+seed: 42
+
+# ── v3 curriculum + weighting ─────────────────────────────────────────────────
+# curriculum_stage: auto
+#   Epoch 1 = stage-1 records only (high-confidence, margin >= 0.7 or 6/6 vote).
+#   Epochs 2-3 = full pool (stage-1 + stage-2).
+#   Set to null to disable (standard shuffled training).
+curriculum_stage: auto
+
+# use_sample_weight: true
+#   Multiplies per-token loss by r["sample_weight"] (float in [0.1, 1.0]).
+#   Weight encodes annotator confidence: yes → max(0.1, 2*agg-1),
+#   no → max(0.1, 1-2*agg). Higher weight = more certain label.
+use_sample_weight: true
+
+# ── Checkpoint / eval strategy ────────────────────────────────────────────────
+save_strategy: steps
+save_total_limit: 3
+eval_strategy: steps
+eval_steps: 100
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+early_stopping_patience: 2
+early_stopping_threshold: 0.005
+lora_dropout: 0.1
+
+# ── Video decoding (must match test-set encoding) ─────────────────────────────
+num_video_frames: 90
+frame_size: 112
+max_pixels_per_frame: 12544

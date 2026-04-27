@@ -1,0 +1,45 @@
+# configs/train_ipo_v3.yaml
+# Toulmin-IPO v3: continues training toulmin_sft_v3 with IPO preference loss.
+# IPO (Azar et al. 2023) uses squared loss targeting margin = 1/(2β) = 5.0,
+# preventing the unbounded reward growth that caused DPO over-alignment.
+#
+# Must be run AFTER toulmin_sft_v3 training completes.
+# Verify /workspace/checkpoints/toulmin_sft_v3/adapter_config.json exists first.
+#
+# Run:
+#   CUDA_VISIBLE_DEVICES=1 python train_ipo.py --config configs/train_ipo_v3.yaml
+#
+# Smoke test:
+#   CUDA_VISIBLE_DEVICES=1 python train_ipo.py --config configs/train_ipo_v3.yaml --smoke
+
+model_id: nvidia/Cosmos-Reason2-8B
+method: ipo
+
+sft_adapter_path: /workspace/checkpoints/toulmin_sft_v3
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+train_path: /workspace/PSI_change/json_mode_90/trf_train_v3/psi_dpo_toulmin_matched_train.jsonl
+val_path:   /workspace/PSI_change/json_mode_90/trf_train_v3/psi_dpo_toulmin_matched_val.jsonl
+output_dir: /workspace/checkpoints/toulmin_ipo_v3
+
+# ── IPO hyperparameters ───────────────────────────────────────────────────────
+# target margin = 1 / (2 * beta) = 5.0
+# use beta: 0.05 -> target = 10 if 5 is too tight
+beta: 0.1
+
+num_train_epochs: 1
+learning_rate: 2.0e-6
+gradient_accumulation_steps: 8
+warmup_steps: 20
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+logging_steps: 5
+eval_every_steps: 50
+save_at_epoch_end: true
+bf16: true
+seed: 42
+
+# ── Video decoding ────────────────────────────────────────────────────────────
+num_video_frames: 90
+frame_size: 112
+max_pixels_per_frame: 12544

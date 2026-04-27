@@ -23,11 +23,16 @@ TRAIN_JSONL = "/workspace/psi_llava_easy200.jsonl"
 OUTPUT_DIR = "/workspace/outputs/Cosmos-Reason2-8B-psi-grpo-from-sft"
 
 
+BASE_MODEL_NAME      = "nvidia/Cosmos-Reason2-8B"
+SFT_ADAPTER_PATH     = "/workspace/outputs/Cosmos-Reason2-8B-psi-video-90f-sft"
+TRAIN_JSONL          = "/workspace/PSI_change/json_mode_90/trf_train/psi_grpo_balanced.jsonl"
+OUTPUT_DIR           = "/workspace/outputs/Cosmos-Reason2-8B-psi-video-90f-grpo-old-judge"
+
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "").strip()
 OPENAI_JUDGE_MODEL = os.environ.get("OPENAI_JUDGE_MODEL", "gpt-5.2")
 
-MAX_SAMPLES = 200
+MAX_SAMPLES = None
 SELECTED_FRAME_INDICES = [0, 5, 10, 15]
 # SELECTED_FRAME_INDICES = None
 

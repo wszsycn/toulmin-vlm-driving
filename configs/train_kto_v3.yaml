@@ -1,0 +1,51 @@
+# configs/train_kto_v3.yaml
+# Toulmin-KTO v3: continues training toulmin_sft_v3 with KTO preference loss.
+# KTO (Ethayarajh et al. 2024) trains on independent labeled examples without
+# requiring paired comparisons. Each DPO pair is expanded to 2 KTO records.
+#
+# Must be run AFTER toulmin_sft_v3 training completes.
+# Verify /workspace/checkpoints/toulmin_sft_v3/adapter_config.json exists first.
+#
+# Run:
+#   CUDA_VISIBLE_DEVICES=1 python train_kto.py --config configs/train_kto_v3.yaml
+#
+# Smoke test:
+#   CUDA_VISIBLE_DEVICES=1 python train_kto.py --config configs/train_kto_v3.yaml --smoke
+
+model_id: nvidia/Cosmos-Reason2-8B
+method: kto
+
+sft_adapter_path: /workspace/checkpoints/toulmin_sft_v3
+
+# ── Data paths (same DPO JSONL as IPO — auto-expanded to 2x KTO records) ─────
+train_path: /workspace/PSI_change/json_mode_90/trf_train_v3/psi_dpo_toulmin_matched_train.jsonl
+val_path:   /workspace/PSI_change/json_mode_90/trf_train_v3/psi_dpo_toulmin_matched_val.jsonl
+output_dir: /workspace/checkpoints/toulmin_kto_v3
+
+# ── KTO hyperparameters ───────────────────────────────────────────────────────
+beta: 0.1
+
+# lambda_desirable: "auto" computes n_undesirable / n_desirable from train data.
+# For paired DPO input this is always 1.0. Set explicitly if using unpaired data.
+lambda_desirable:   0.56
+lambda_undesirable: 1.0
+
+# KL EMA smoothing factor (alpha=0.1 → ~10-step half-life).
+kl_ema_alpha: 0.1
+
+num_train_epochs: 1
+learning_rate: 3.0e-6
+gradient_accumulation_steps: 8
+warmup_steps: 20
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+logging_steps: 5
+eval_every_steps: 50
+save_at_epoch_end: true
+bf16: true
+seed: 42
+
+# ── Video decoding ────────────────────────────────────────────────────────────
+num_video_frames: 90
+frame_size: 112
+max_pixels_per_frame: 12544

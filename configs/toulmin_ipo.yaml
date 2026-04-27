@@ -1,0 +1,44 @@
+# configs/toulmin_ipo.yaml
+# IPO fine-tuning of the Toulmin SFT model on PSI preference pairs.
+# IPO (Azar et al. 2023) replaces DPO sigmoid with squared loss;
+# target margin = 1 / (2 * beta) = 5.0 with beta=0.1.
+# Prevents unbounded reward growth (DPO reached 8+, worsening Brier score).
+#
+# Run:
+#   CUDA_VISIBLE_DEVICES=1 python train_ipo.py --config configs/toulmin_ipo.yaml
+#
+# Smoke test (5 optimizer steps):
+#   CUDA_VISIBLE_DEVICES=1 python train_ipo.py --config configs/toulmin_ipo.yaml --smoke
+
+model_id: nvidia/Cosmos-Reason2-8B
+
+# Use v3 SFT if available; fall back to v2 if not yet retrained.
+sft_adapter_path: /workspace/checkpoints/toulmin_sft_v3
+# sft_adapter_path: /workspace/checkpoints/toulmin_sft   # v2 fallback
+
+# ── Data paths (trf_train_v3 — matched intersection with SC CoT) ──────────────
+train_path: /workspace/PSI_change/json_mode_90/trf_train_v3/psi_dpo_toulmin_matched_train.jsonl
+val_path:   /workspace/PSI_change/json_mode_90/trf_train_v3/psi_dpo_toulmin_matched_val.jsonl
+output_dir: /workspace/checkpoints/toulmin_ipo
+
+# ── IPO hyperparameters ───────────────────────────────────────────────────────
+method: ipo
+beta: 0.1                      # target margin = 1/(2*beta) = 5.0
+                               # use beta: 0.05 -> target=10 if 5 is too tight
+
+num_train_epochs: 1
+learning_rate: 5.0e-6
+gradient_accumulation_steps: 8
+warmup_steps: 20
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+logging_steps: 5
+eval_every_steps: 50
+save_at_epoch_end: true
+bf16: true
+seed: 42
+
+# ── Video decoding (must match SFT training) ──────────────────────────────────
+num_video_frames: 90
+frame_size: 112
+max_pixels_per_frame: 12544    # 112x112; sets min_pixels=3136 / max_pixels=12544
